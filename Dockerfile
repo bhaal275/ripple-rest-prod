@@ -3,7 +3,7 @@ FROM ubuntu
 RUN apt-get update && apt-get upgrade -y
 
 # Install packages we need
-RUN apt-get install -y git npm
+RUN apt-get install -y git npm postgresql
 
 # Get source code
 RUN cd / && git clone https://github.com/ripple/ripple-rest.git && cd /ripple-rest
