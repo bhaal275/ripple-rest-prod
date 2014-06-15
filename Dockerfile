@@ -8,6 +8,8 @@ RUN apt-get install -y git npm
 # Get source code
 RUN cd / && git clone https://github.com/ripple/ripple-rest.git && cd /ripple-rest
 
+ENV DATABASE_URL postgres://ripple_rest_user:password@localhost:5432/ripple_rest_db
+
 # Install dependencies
 # debian renamed the binary which causes problems installing some packages.
 # There is also a nodejs-legacy package with the old name.
